@@ -9,6 +9,9 @@ export default function IncidentTable({
       <h2 className="text-xl font-semibold text-cyan-400 mb-4">
         Incident Table
       </h2>
+      <p className="text-slate-400 mb-4">
+        Showing {incidents.length} incidents
+      </p>
 
       <table className="w-full text-sm">
 
