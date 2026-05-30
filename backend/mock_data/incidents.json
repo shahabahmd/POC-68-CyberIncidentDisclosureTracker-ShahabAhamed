@@ -1,38 +1,902 @@
 [
   {
     "id": 1,
-    "company": "Microsoft",
-    "sector": "Technology",
-    "incident_type": "Data Breach",
-    "severity": "High",
-    "country": "USA",
-    "date": "2025-02-12"
+    "company": "Infosys",
+    "sector": "Telecommunications",
+    "incident_type": "Credential Leak",
+    "severity": "Critical",
+    "country": "Canada",
+    "date": "2025-07-31"
   },
   {
     "id": 2,
-    "company": "HSBC",
-    "sector": "Finance",
+    "company": "IBM",
+    "sector": "Energy",
     "incident_type": "Phishing",
-    "severity": "Medium",
-    "country": "UK",
-    "date": "2025-03-21"
+    "severity": "Low",
+    "country": "India",
+    "date": "2025-09-06"
   },
   {
     "id": 3,
-    "company": "Toyota",
-    "sector": "Automotive",
-    "incident_type": "Ransomware",
-    "severity": "High",
-    "country": "Japan",
-    "date": "2025-04-02"
+    "company": "Nvidia",
+    "sector": "Technology",
+    "incident_type": "Supply Chain Attack",
+    "severity": "Critical",
+    "country": "UK",
+    "date": "2025-12-06"
   },
   {
     "id": 4,
+    "company": "HSBC",
+    "sector": "Retail",
+    "incident_type": "Phishing",
+    "severity": "Critical",
+    "country": "Canada",
+    "date": "2025-10-17"
+  },
+  {
+    "id": 5,
+    "company": "Intel",
+    "sector": "Energy",
+    "incident_type": "Phishing",
+    "severity": "High",
+    "country": "Canada",
+    "date": "2026-03-02"
+  },
+  {
+    "id": 6,
     "company": "Infosys",
+    "sector": "Finance",
+    "incident_type": "Supply Chain Attack",
+    "severity": "High",
+    "country": "Canada",
+    "date": "2026-04-18"
+  },
+  {
+    "id": 7,
+    "company": "Intel",
     "sector": "Technology",
     "incident_type": "Credential Leak",
     "severity": "Low",
+    "country": "UK",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 8,
+    "company": "HSBC",
+    "sector": "Healthcare",
+    "incident_type": "Supply Chain Attack",
+    "severity": "Critical",
+    "country": "Germany",
+    "date": "2026-05-16"
+  },
+  {
+    "id": 9,
+    "company": "Intel",
+    "sector": "Government",
+    "incident_type": "Data Breach",
+    "severity": "High",
+    "country": "UK",
+    "date": "2025-12-28"
+  },
+  {
+    "id": 10,
+    "company": "Intel",
+    "sector": "Technology",
+    "incident_type": "DDoS",
+    "severity": "Critical",
+    "country": "Australia",
+    "date": "2025-09-14"
+  },
+  {
+    "id": 11,
+    "company": "Oracle",
+    "sector": "Government",
+    "incident_type": "Ransomware",
+    "severity": "Low",
     "country": "India",
-    "date": "2025-04-19"
+    "date": "2026-01-02"
+  },
+  {
+    "id": 12,
+    "company": "Toyota",
+    "sector": "Finance",
+    "incident_type": "Credential Leak",
+    "severity": "Low",
+    "country": "Germany",
+    "date": "2026-04-14"
+  },
+  {
+    "id": 13,
+    "company": "HSBC",
+    "sector": "Healthcare",
+    "incident_type": "Credential Leak",
+    "severity": "Medium",
+    "country": "Australia",
+    "date": "2025-05-30"
+  },
+  {
+    "id": 14,
+    "company": "Intel",
+    "sector": "Finance",
+    "incident_type": "Phishing",
+    "severity": "Medium",
+    "country": "Japan",
+    "date": "2025-07-12"
+  },
+  {
+    "id": 15,
+    "company": "Toyota",
+    "sector": "Telecommunications",
+    "incident_type": "Data Breach",
+    "severity": "High",
+    "country": "Canada",
+    "date": "2026-05-01"
+  },
+  {
+    "id": 16,
+    "company": "Intel",
+    "sector": "Healthcare",
+    "incident_type": "Phishing",
+    "severity": "Medium",
+    "country": "UK",
+    "date": "2026-03-16"
+  },
+  {
+    "id": 17,
+    "company": "Amazon",
+    "sector": "Healthcare",
+    "incident_type": "DDoS",
+    "severity": "High",
+    "country": "Australia",
+    "date": "2026-02-09"
+  },
+  {
+    "id": 18,
+    "company": "Meta",
+    "sector": "Healthcare",
+    "incident_type": "Credential Leak",
+    "severity": "Low",
+    "country": "Germany",
+    "date": "2026-03-06"
+  },
+  {
+    "id": 19,
+    "company": "JP Morgan",
+    "sector": "Technology",
+    "incident_type": "Supply Chain Attack",
+    "severity": "Critical",
+    "country": "UK",
+    "date": "2025-11-23"
+  },
+  {
+    "id": 20,
+    "company": "TCS",
+    "sector": "Retail",
+    "incident_type": "Insider Threat",
+    "severity": "Critical",
+    "country": "India",
+    "date": "2025-10-05"
+  },
+  {
+    "id": 21,
+    "company": "Microsoft",
+    "sector": "Telecommunications",
+    "incident_type": "DDoS",
+    "severity": "High",
+    "country": "USA",
+    "date": "2025-09-20"
+  },
+  {
+    "id": 22,
+    "company": "HSBC",
+    "sector": "Finance",
+    "incident_type": "Phishing",
+    "severity": "Critical",
+    "country": "Japan",
+    "date": "2026-03-06"
+  },
+  {
+    "id": 23,
+    "company": "HSBC",
+    "sector": "Energy",
+    "incident_type": "Ransomware",
+    "severity": "High",
+    "country": "India",
+    "date": "2025-07-02"
+  },
+  {
+    "id": 24,
+    "company": "Tesla",
+    "sector": "Finance",
+    "incident_type": "Insider Threat",
+    "severity": "Medium",
+    "country": "Germany",
+    "date": "2026-05-01"
+  },
+  {
+    "id": 25,
+    "company": "Cisco",
+    "sector": "Technology",
+    "incident_type": "Supply Chain Attack",
+    "severity": "Medium",
+    "country": "Australia",
+    "date": "2025-12-09"
+  },
+  {
+    "id": 26,
+    "company": "Toyota",
+    "sector": "Technology",
+    "incident_type": "DDoS",
+    "severity": "High",
+    "country": "India",
+    "date": "2026-04-11"
+  },
+  {
+    "id": 27,
+    "company": "Google",
+    "sector": "Finance",
+    "incident_type": "Data Breach",
+    "severity": "Medium",
+    "country": "Canada",
+    "date": "2025-07-19"
+  },
+  {
+    "id": 28,
+    "company": "Tesla",
+    "sector": "Government",
+    "incident_type": "Phishing",
+    "severity": "Medium",
+    "country": "Australia",
+    "date": "2025-11-03"
+  },
+  {
+    "id": 29,
+    "company": "Google",
+    "sector": "Energy",
+    "incident_type": "Insider Threat",
+    "severity": "Low",
+    "country": "Canada",
+    "date": "2026-05-28"
+  },
+  {
+    "id": 30,
+    "company": "Meta",
+    "sector": "Energy",
+    "incident_type": "Insider Threat",
+    "severity": "Medium",
+    "country": "Germany",
+    "date": "2026-01-16"
+  },
+  {
+    "id": 31,
+    "company": "TCS",
+    "sector": "Healthcare",
+    "incident_type": "Data Breach",
+    "severity": "Critical",
+    "country": "Australia",
+    "date": "2025-12-15"
+  },
+  {
+    "id": 32,
+    "company": "Microsoft",
+    "sector": "Retail",
+    "incident_type": "Insider Threat",
+    "severity": "Low",
+    "country": "India",
+    "date": "2025-11-04"
+  },
+  {
+    "id": 33,
+    "company": "Toyota",
+    "sector": "Finance",
+    "incident_type": "Insider Threat",
+    "severity": "Critical",
+    "country": "Germany",
+    "date": "2026-02-12"
+  },
+  {
+    "id": 34,
+    "company": "IBM",
+    "sector": "Technology",
+    "incident_type": "Data Breach",
+    "severity": "High",
+    "country": "UK",
+    "date": "2025-07-30"
+  },
+  {
+    "id": 35,
+    "company": "JP Morgan",
+    "sector": "Healthcare",
+    "incident_type": "Insider Threat",
+    "severity": "Critical",
+    "country": "Germany",
+    "date": "2025-06-22"
+  },
+  {
+    "id": 36,
+    "company": "TCS",
+    "sector": "Energy",
+    "incident_type": "Data Breach",
+    "severity": "High",
+    "country": "UK",
+    "date": "2026-03-05"
+  },
+  {
+    "id": 37,
+    "company": "Oracle",
+    "sector": "Technology",
+    "incident_type": "Data Breach",
+    "severity": "Medium",
+    "country": "USA",
+    "date": "2025-11-16"
+  },
+  {
+    "id": 38,
+    "company": "Intel",
+    "sector": "Energy",
+    "incident_type": "Insider Threat",
+    "severity": "High",
+    "country": "USA",
+    "date": "2025-07-03"
+  },
+  {
+    "id": 39,
+    "company": "Microsoft",
+    "sector": "Energy",
+    "incident_type": "Credential Leak",
+    "severity": "Low",
+    "country": "India",
+    "date": "2025-07-21"
+  },
+  {
+    "id": 40,
+    "company": "Amazon",
+    "sector": "Government",
+    "incident_type": "DDoS",
+    "severity": "High",
+    "country": "USA",
+    "date": "2026-03-21"
+  },
+  {
+    "id": 41,
+    "company": "Intel",
+    "sector": "Healthcare",
+    "incident_type": "Phishing",
+    "severity": "Critical",
+    "country": "Germany",
+    "date": "2026-03-28"
+  },
+  {
+    "id": 42,
+    "company": "Intel",
+    "sector": "Healthcare",
+    "incident_type": "DDoS",
+    "severity": "High",
+    "country": "Canada",
+    "date": "2026-04-15"
+  },
+  {
+    "id": 43,
+    "company": "IBM",
+    "sector": "Energy",
+    "incident_type": "Credential Leak",
+    "severity": "Low",
+    "country": "India",
+    "date": "2026-04-18"
+  },
+  {
+    "id": 44,
+    "company": "Amazon",
+    "sector": "Finance",
+    "incident_type": "Insider Threat",
+    "severity": "High",
+    "country": "Germany",
+    "date": "2025-08-12"
+  },
+  {
+    "id": 45,
+    "company": "IBM",
+    "sector": "Retail",
+    "incident_type": "Data Breach",
+    "severity": "Low",
+    "country": "Australia",
+    "date": "2026-04-25"
+  },
+  {
+    "id": 46,
+    "company": "Cisco",
+    "sector": "Retail",
+    "incident_type": "Ransomware",
+    "severity": "Low",
+    "country": "India",
+    "date": "2025-08-01"
+  },
+  {
+    "id": 47,
+    "company": "Microsoft",
+    "sector": "Retail",
+    "incident_type": "Supply Chain Attack",
+    "severity": "Low",
+    "country": "Canada",
+    "date": "2026-02-12"
+  },
+  {
+    "id": 48,
+    "company": "Oracle",
+    "sector": "Finance",
+    "incident_type": "Supply Chain Attack",
+    "severity": "Low",
+    "country": "Australia",
+    "date": "2025-08-26"
+  },
+  {
+    "id": 49,
+    "company": "Toyota",
+    "sector": "Finance",
+    "incident_type": "Credential Leak",
+    "severity": "High",
+    "country": "Australia",
+    "date": "2025-07-15"
+  },
+  {
+    "id": 50,
+    "company": "Meta",
+    "sector": "Energy",
+    "incident_type": "Data Breach",
+    "severity": "Medium",
+    "country": "India",
+    "date": "2026-01-31"
+  },
+  {
+    "id": 51,
+    "company": "Oracle",
+    "sector": "Retail",
+    "incident_type": "Insider Threat",
+    "severity": "Critical",
+    "country": "Australia",
+    "date": "2025-08-28"
+  },
+  {
+    "id": 52,
+    "company": "TCS",
+    "sector": "Government",
+    "incident_type": "Credential Leak",
+    "severity": "Low",
+    "country": "India",
+    "date": "2026-03-12"
+  },
+  {
+    "id": 53,
+    "company": "Cisco",
+    "sector": "Energy",
+    "incident_type": "Ransomware",
+    "severity": "Medium",
+    "country": "India",
+    "date": "2025-08-07"
+  },
+  {
+    "id": 54,
+    "company": "Toyota",
+    "sector": "Retail",
+    "incident_type": "Credential Leak",
+    "severity": "Medium",
+    "country": "USA",
+    "date": "2025-07-01"
+  },
+  {
+    "id": 55,
+    "company": "IBM",
+    "sector": "Energy",
+    "incident_type": "Supply Chain Attack",
+    "severity": "Low",
+    "country": "Australia",
+    "date": "2026-01-12"
+  },
+  {
+    "id": 56,
+    "company": "Nvidia",
+    "sector": "Technology",
+    "incident_type": "Phishing",
+    "severity": "Medium",
+    "country": "Germany",
+    "date": "2025-12-27"
+  },
+  {
+    "id": 57,
+    "company": "Intel",
+    "sector": "Healthcare",
+    "incident_type": "Insider Threat",
+    "severity": "Low",
+    "country": "Japan",
+    "date": "2026-02-05"
+  },
+  {
+    "id": 58,
+    "company": "Toyota",
+    "sector": "Energy",
+    "incident_type": "Data Breach",
+    "severity": "Low",
+    "country": "UK",
+    "date": "2025-08-11"
+  },
+  {
+    "id": 59,
+    "company": "Tesla",
+    "sector": "Government",
+    "incident_type": "Credential Leak",
+    "severity": "High",
+    "country": "Japan",
+    "date": "2025-12-16"
+  },
+  {
+    "id": 60,
+    "company": "Oracle",
+    "sector": "Healthcare",
+    "incident_type": "DDoS",
+    "severity": "High",
+    "country": "Germany",
+    "date": "2026-02-14"
+  },
+  {
+    "id": 61,
+    "company": "Toyota",
+    "sector": "Technology",
+    "incident_type": "Ransomware",
+    "severity": "Low",
+    "country": "Japan",
+    "date": "2025-09-02"
+  },
+  {
+    "id": 62,
+    "company": "Oracle",
+    "sector": "Technology",
+    "incident_type": "Phishing",
+    "severity": "Medium",
+    "country": "Germany",
+    "date": "2025-06-29"
+  },
+  {
+    "id": 63,
+    "company": "Meta",
+    "sector": "Technology",
+    "incident_type": "Data Breach",
+    "severity": "Critical",
+    "country": "Japan",
+    "date": "2025-09-15"
+  },
+  {
+    "id": 64,
+    "company": "Tesla",
+    "sector": "Technology",
+    "incident_type": "DDoS",
+    "severity": "Low",
+    "country": "Japan",
+    "date": "2026-02-04"
+  },
+  {
+    "id": 65,
+    "company": "Cisco",
+    "sector": "Finance",
+    "incident_type": "Supply Chain Attack",
+    "severity": "High",
+    "country": "Canada",
+    "date": "2025-12-10"
+  },
+  {
+    "id": 66,
+    "company": "Tesla",
+    "sector": "Healthcare",
+    "incident_type": "Phishing",
+    "severity": "Medium",
+    "country": "Canada",
+    "date": "2025-11-11"
+  },
+  {
+    "id": 67,
+    "company": "Tesla",
+    "sector": "Telecommunications",
+    "incident_type": "DDoS",
+    "severity": "Low",
+    "country": "USA",
+    "date": "2025-07-02"
+  },
+  {
+    "id": 68,
+    "company": "Meta",
+    "sector": "Retail",
+    "incident_type": "Credential Leak",
+    "severity": "Critical",
+    "country": "USA",
+    "date": "2025-12-29"
+  },
+  {
+    "id": 69,
+    "company": "Oracle",
+    "sector": "Telecommunications",
+    "incident_type": "Ransomware",
+    "severity": "High",
+    "country": "Australia",
+    "date": "2025-07-31"
+  },
+  {
+    "id": 70,
+    "company": "Toyota",
+    "sector": "Finance",
+    "incident_type": "Phishing",
+    "severity": "Critical",
+    "country": "Germany",
+    "date": "2025-12-11"
+  },
+  {
+    "id": 71,
+    "company": "Intel",
+    "sector": "Healthcare",
+    "incident_type": "Credential Leak",
+    "severity": "Critical",
+    "country": "USA",
+    "date": "2025-12-13"
+  },
+  {
+    "id": 72,
+    "company": "Meta",
+    "sector": "Healthcare",
+    "incident_type": "Phishing",
+    "severity": "Critical",
+    "country": "India",
+    "date": "2026-03-04"
+  },
+  {
+    "id": 73,
+    "company": "Microsoft",
+    "sector": "Retail",
+    "incident_type": "Insider Threat",
+    "severity": "High",
+    "country": "UK",
+    "date": "2026-05-10"
+  },
+  {
+    "id": 74,
+    "company": "Cisco",
+    "sector": "Retail",
+    "incident_type": "Phishing",
+    "severity": "Low",
+    "country": "USA",
+    "date": "2025-06-24"
+  },
+  {
+    "id": 75,
+    "company": "Infosys",
+    "sector": "Government",
+    "incident_type": "Supply Chain Attack",
+    "severity": "Medium",
+    "country": "USA",
+    "date": "2025-09-07"
+  },
+  {
+    "id": 76,
+    "company": "Nvidia",
+    "sector": "Finance",
+    "incident_type": "Phishing",
+    "severity": "Critical",
+    "country": "Japan",
+    "date": "2025-07-25"
+  },
+  {
+    "id": 77,
+    "company": "Microsoft",
+    "sector": "Healthcare",
+    "incident_type": "Phishing",
+    "severity": "Critical",
+    "country": "Australia",
+    "date": "2026-04-20"
+  },
+  {
+    "id": 78,
+    "company": "Intel",
+    "sector": "Telecommunications",
+    "incident_type": "Phishing",
+    "severity": "Critical",
+    "country": "Canada",
+    "date": "2026-02-01"
+  },
+  {
+    "id": 79,
+    "company": "Meta",
+    "sector": "Healthcare",
+    "incident_type": "Data Breach",
+    "severity": "High",
+    "country": "Japan",
+    "date": "2025-11-29"
+  },
+  {
+    "id": 80,
+    "company": "Google",
+    "sector": "Government",
+    "incident_type": "Supply Chain Attack",
+    "severity": "Critical",
+    "country": "UK",
+    "date": "2025-12-14"
+  },
+  {
+    "id": 81,
+    "company": "Google",
+    "sector": "Healthcare",
+    "incident_type": "Data Breach",
+    "severity": "Low",
+    "country": "USA",
+    "date": "2026-04-04"
+  },
+  {
+    "id": 82,
+    "company": "Oracle",
+    "sector": "Retail",
+    "incident_type": "DDoS",
+    "severity": "Critical",
+    "country": "Australia",
+    "date": "2026-01-24"
+  },
+  {
+    "id": 83,
+    "company": "Microsoft",
+    "sector": "Retail",
+    "incident_type": "Ransomware",
+    "severity": "Low",
+    "country": "Germany",
+    "date": "2025-11-26"
+  },
+  {
+    "id": 84,
+    "company": "IBM",
+    "sector": "Telecommunications",
+    "incident_type": "Ransomware",
+    "severity": "High",
+    "country": "India",
+    "date": "2026-01-02"
+  },
+  {
+    "id": 85,
+    "company": "Cisco",
+    "sector": "Government",
+    "incident_type": "Phishing",
+    "severity": "High",
+    "country": "Australia",
+    "date": "2025-08-27"
+  },
+  {
+    "id": 86,
+    "company": "Cisco",
+    "sector": "Healthcare",
+    "incident_type": "Insider Threat",
+    "severity": "Low",
+    "country": "Germany",
+    "date": "2026-05-26"
+  },
+  {
+    "id": 87,
+    "company": "IBM",
+    "sector": "Healthcare",
+    "incident_type": "DDoS",
+    "severity": "Medium",
+    "country": "Australia",
+    "date": "2025-07-24"
+  },
+  {
+    "id": 88,
+    "company": "Amazon",
+    "sector": "Government",
+    "incident_type": "Data Breach",
+    "severity": "Low",
+    "country": "Germany",
+    "date": "2026-02-06"
+  },
+  {
+    "id": 89,
+    "company": "Google",
+    "sector": "Healthcare",
+    "incident_type": "Phishing",
+    "severity": "Low",
+    "country": "Australia",
+    "date": "2026-02-28"
+  },
+  {
+    "id": 90,
+    "company": "Tesla",
+    "sector": "Retail",
+    "incident_type": "Credential Leak",
+    "severity": "High",
+    "country": "USA",
+    "date": "2026-03-06"
+  },
+  {
+    "id": 91,
+    "company": "TCS",
+    "sector": "Technology",
+    "incident_type": "Phishing",
+    "severity": "Low",
+    "country": "Canada",
+    "date": "2026-03-06"
+  },
+  {
+    "id": 92,
+    "company": "IBM",
+    "sector": "Retail",
+    "incident_type": "Ransomware",
+    "severity": "Critical",
+    "country": "Australia",
+    "date": "2025-11-15"
+  },
+  {
+    "id": 93,
+    "company": "Amazon",
+    "sector": "Retail",
+    "incident_type": "Credential Leak",
+    "severity": "Low",
+    "country": "USA",
+    "date": "2025-11-18"
+  },
+  {
+    "id": 94,
+    "company": "Oracle",
+    "sector": "Telecommunications",
+    "incident_type": "Ransomware",
+    "severity": "Low",
+    "country": "Australia",
+    "date": "2025-12-22"
+  },
+  {
+    "id": 95,
+    "company": "Toyota",
+    "sector": "Energy",
+    "incident_type": "DDoS",
+    "severity": "Low",
+    "country": "USA",
+    "date": "2025-11-26"
+  },
+  {
+    "id": 96,
+    "company": "Google",
+    "sector": "Technology",
+    "incident_type": "Supply Chain Attack",
+    "severity": "Medium",
+    "country": "UK",
+    "date": "2026-04-28"
+  },
+  {
+    "id": 97,
+    "company": "IBM",
+    "sector": "Telecommunications",
+    "incident_type": "Ransomware",
+    "severity": "Critical",
+    "country": "Germany",
+    "date": "2026-01-27"
+  },
+  {
+    "id": 98,
+    "company": "HSBC",
+    "sector": "Technology",
+    "incident_type": "Phishing",
+    "severity": "Critical",
+    "country": "Germany",
+    "date": "2025-09-02"
+  },
+  {
+    "id": 99,
+    "company": "Meta",
+    "sector": "Telecommunications",
+    "incident_type": "Ransomware",
+    "severity": "High",
+    "country": "India",
+    "date": "2026-03-28"
+  },
+  {
+    "id": 100,
+    "company": "Infosys",
+    "sector": "Telecommunications",
+    "incident_type": "Insider Threat",
+    "severity": "Low",
+    "country": "Canada",
+    "date": "2026-02-28"
   }
 ]

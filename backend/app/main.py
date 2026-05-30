@@ -32,3 +32,27 @@ def get_metrics():
         "sectors": len(set(i["sector"] for i in incidents)),
         "companies": len(set(i["company"] for i in incidents))
     }
+@app.get("/api/analytics")
+def get_analytics():
+    incidents = load_data()
+
+    severity_breakdown = {}
+    sector_breakdown = {}
+
+    for incident in incidents:
+
+        severity = incident["severity"]
+        sector = incident["sector"]
+
+        severity_breakdown[severity] = (
+            severity_breakdown.get(severity, 0) + 1
+        )
+
+        sector_breakdown[sector] = (
+            sector_breakdown.get(sector, 0) + 1
+        )
+
+    return {
+        "severity_breakdown": severity_breakdown,
+        "sector_breakdown": sector_breakdown
+    }
