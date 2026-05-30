@@ -1,8 +1,17 @@
 from fastapi import FastAPI
 import json
+from fastapi import Query
 from pathlib import Path
-
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 app = FastAPI(title="Cyber Incident Disclosure Tracker")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 DATA_FILE = Path(__file__).parent.parent / "mock_data" / "incidents.json"
 
@@ -18,9 +27,25 @@ def root():
 
 
 @app.get("/api/incidents")
-def get_incidents():
-    return load_data()
+def get_incidents(
+    sector: str | None = Query(None),
+    severity: str | None = Query(None)
+):
+    incidents = load_data()
 
+    if sector:
+        incidents = [
+            i for i in incidents
+            if i["sector"] == sector
+        ]
+
+    if severity:
+        incidents = [
+            i for i in incidents
+            if i["severity"] == severity
+        ]
+
+    return incidents
 
 @app.get("/api/metrics")
 def get_metrics():
@@ -38,6 +63,7 @@ def get_analytics():
 
     severity_breakdown = {}
     sector_breakdown = {}
+    monthly_trend = {}
 
     for incident in incidents:
 
@@ -52,7 +78,21 @@ def get_analytics():
             sector_breakdown.get(sector, 0) + 1
         )
 
+        month = incident["date"][:7]
+
+        monthly_trend[month] = (
+            monthly_trend.get(month, 0) + 1
+        )
+
     return {
         "severity_breakdown": severity_breakdown,
-        "sector_breakdown": sector_breakdown
+        "sector_breakdown": sector_breakdown,
+        "monthly_trend": monthly_trend
     }
+@app.get("/api/download")
+def download_data():
+    return FileResponse(
+        "backend/mock_data/incidents.json",
+        media_type="application/json",
+        filename="incidents.json"
+    )
