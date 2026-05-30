@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "company": "Microsoft",
+    "sector": "Technology",
+    "incident_type": "Data Breach",
+    "severity": "High",
+    "country": "USA",
+    "date": "2025-02-12"
+  },
+  {
+    "id": 2,
+    "company": "HSBC",
+    "sector": "Finance",
+    "incident_type": "Phishing",
+    "severity": "Medium",
+    "country": "UK",
+    "date": "2025-03-21"
+  },
+  {
+    "id": 3,
+    "company": "Toyota",
+    "sector": "Automotive",
+    "incident_type": "Ransomware",
+    "severity": "High",
+    "country": "Japan",
+    "date": "2025-04-02"
+  },
+  {
+    "id": 4,
+    "company": "Infosys",
+    "sector": "Technology",
+    "incident_type": "Credential Leak",
+    "severity": "Low",
+    "country": "India",
+    "date": "2025-04-19"
+  }
+]
