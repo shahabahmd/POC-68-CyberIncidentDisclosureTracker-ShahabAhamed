@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import DeveloperSignature from "@/components/DeveloperSignature";
 import SeverityChart from "@/components/SeverityChart";
 import SectorChart from "@/components/SectorChart";
 import TrendChart from "@/components/TrendChart";
@@ -65,10 +64,12 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#030712] text-white p-6 md:p-8 selection:bg-cyan-500/30">
-      <div className="max-w-[1600px] mx-auto">
-        {/* Header */}
-        <div className="mb-8 relative flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div>
+      <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-8">
+        {/* Main Content Area (70%) */}
+        <div className="w-full lg:w-[70%] flex flex-col min-w-0">
+          {/* Header */}
+          <div className="mb-8 relative flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
             <div className="flex items-center space-x-2 mb-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -216,12 +217,9 @@ export default function Home() {
           </ul>
         </div>
 
-        {/* Main Grid Layout */}
-        <div className="grid grid-cols-1 xl:grid-cols-10 gap-6">
-          
-          {/* Main Stage */}
-          <div className="xl:col-span-7 flex flex-col space-y-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Main Stage */}
+        <div className="flex flex-col space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <SeverityChart data={analytics.severity_breakdown} />
               <SectorChart data={analytics.sector_breakdown} />
             </div>
@@ -286,23 +284,12 @@ export default function Home() {
 
             <IncidentTable incidents={incidents} />
           </div>
-
-          {/* Sidebar */}
-          <div className="xl:col-span-3 h-full">
-            <IntelligenceSidebar metrics={metrics} analytics={analytics} />
-          </div>
         </div>
-      </div>
-      <div className="mt-12 border-t border-slate-800/50 pt-6">
-        <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-          <div className="flex space-x-2">
-            <span className="font-semibold text-slate-400">Source:</span>
-            <span>SEC EDGAR • GDELT</span>
-          </div>
-          <DeveloperSignature />
-          <div className="flex space-x-2">
-            <span className="font-semibold text-slate-400">Last Updated:</span>
-            <span>May 2026</span>
+
+        {/* Persistent Right Sidebar (30%) */}
+        <div className="w-full lg:w-[30%] relative">
+          <div className="lg:sticky lg:top-8 lg:h-[calc(100vh-4rem)]">
+            <IntelligenceSidebar metrics={metrics} analytics={analytics} />
           </div>
         </div>
       </div>

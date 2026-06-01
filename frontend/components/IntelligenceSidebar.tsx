@@ -48,7 +48,7 @@ export default function IntelligenceSidebar({ metrics, analytics }: any) {
   }
 
   return (
-    <div className="h-full glass-card border border-slate-800 rounded-xl p-6 flex flex-col relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(56,189,248,0.1)]">
+    <div className="h-full glass-card border border-slate-800 rounded-xl p-6 flex flex-col relative overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] transition-all duration-300 hover:shadow-[0_0_30px_rgba(56,189,248,0.1)]">
       <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 blur-[50px] rounded-full pointer-events-none"></div>
       
       <div className="flex items-center space-x-2 mb-8 border-b border-slate-800 pb-4">
