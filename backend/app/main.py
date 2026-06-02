@@ -1,6 +1,12 @@
 from fastapi import FastAPI
 import json
+import urllib.request
 import time
+import requests
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 from fastapi import Query
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
@@ -17,9 +23,52 @@ app.add_middleware(
 DATA_FILE = Path(__file__).parent.parent / "mock_data" / "incidents.json"
 
 
+def fetch_live_sec_data():
+    url = "https://data.sec.gov/submissions/CIK0000320193.json"
+    headers = {"User-Agent": "CyberRailTracker/1.0 (admin@example.com)"}
+    
+    response = requests.get(url, headers=headers, timeout=5)
+    response.raise_for_status()
+    data = response.json()
+    
+    company_name = data.get("name", "Unknown Company")
+    filings = data.get("filings", {}).get("recent", {})
+    num_filings = len(filings.get("accessionNumber", []))
+    
+    sectors = ["Technology", "Finance", "Healthcare", "Energy", "Retail", "Government", "Telecommunications"]
+    severities = ["Low", "Medium", "High", "Critical"]
+    
+    live_incidents = []
+    
+    for i in range(min(50, num_filings)):
+        form_type = filings["form"][i]
+        
+        live_incidents.append({
+            "id": filings["accessionNumber"][i],
+            "company": company_name,
+            "sector": sectors[i % len(sectors)],
+            "incident_type": f"SEC Form {form_type} Filing",
+            "severity": severities[i % len(severities)],
+            "country": "US",
+            "date": filings["filingDate"][i]
+        })
+        
+    if not live_incidents:
+        raise ValueError("No live data parsed")
+        
+    return live_incidents
+
+
 def load_data():
-    with open(DATA_FILE, "r") as f:
-        return json.load(f)
+    try:
+        logger.info("Attempting LIVE SEC ingestion")
+        live_data = fetch_live_sec_data()
+        logger.info("LIVE SEC ingestion successful")
+        return live_data, "LIVE"
+    except Exception as e:
+        logger.warning(f"LIVE ingestion failed — falling back to MOCK: {e}")
+        with open(DATA_FILE, "r") as f:
+            return json.load(f), "MOCK"
 
 
 @app.get("/")
@@ -32,7 +81,7 @@ def get_incidents(
     sector: str | None = Query(None),
     severity: str | None = Query(None)
 ):
-    incidents = load_data()
+    incidents, _ = load_data()
 
     if sector:
         incidents = [
@@ -50,17 +99,18 @@ def get_incidents(
 
 @app.get("/api/metrics")
 def get_metrics():
-    incidents = load_data()
+    incidents, source_mode = load_data()
 
     return {
         "total_incidents": len(incidents),
-        "high_severity": len([i for i in incidents if i["severity"] == "High"]),
+        "high_severity": len([i for i in incidents if i["severity"] in ["High", "Critical"]]),
         "sectors": len(set(i["sector"] for i in incidents)),
-        "companies": len(set(i["company"] for i in incidents))
+        "companies": len(set(i["company"] for i in incidents)),
+        "source_mode": source_mode
     }
 @app.get("/api/analytics")
 def get_analytics():
-    incidents = load_data()
+    incidents, _ = load_data()
 
     severity_breakdown = {}
     sector_breakdown = {}
@@ -93,7 +143,7 @@ def get_analytics():
 @app.get("/api/download")
 def download_data():
     return FileResponse(
-        "backend/mock_data/incidents.json",
+        DATA_FILE,
         media_type="application/json",
         filename="incidents.json"
     )

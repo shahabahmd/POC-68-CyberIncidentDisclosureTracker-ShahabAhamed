@@ -76,7 +76,7 @@ export default function Home() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
               </span>
               <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-400">
-                Live Intelligence Feed
+                {metrics.source_mode || "LIVE"} Intelligence Feed
               </p>
             </div>
             <h1 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-cyan-500 tracking-tight pb-1">
